@@ -73,9 +73,15 @@ hyperfine --warmup 1 --runs 9 'docker run --rm alpine echo ok'
 ```
 .
 ├── README.md
+├── LICENSE
+├── artigo.pdf               # versão final do artigo
 ├── scripts/
 │   └── run_benchmarks.sh    # executa as três suítes e salva em results/
-└── results/                 # saídas brutas (sysbench/fio/hyperfine)
+├── data/                    # dados consolidados das tabelas (CSV)
+│   ├── memoria.csv
+│   ├── io_disco.csv
+│   └── startup.csv
+└── results/                 # saídas brutas das execuções (sysbench/fio/hyperfine)
 ```
 
 ## Principais resultados
@@ -88,6 +94,19 @@ hyperfine --warmup 1 --runs 9 'docker run --rm alpine echo ok'
 
 > Valores em que o container supera o nativo refletem caching/variação entre execuções,
 > não aceleração real de hardware.
+
+## Dados brutos
+
+Os valores reportados nas tabelas do artigo estão em `data/` (formato CSV):
+
+| Arquivo | Conteúdo | Tabela no artigo |
+|---|---|---|
+| `data/memoria.csv` | Bandwidth de memória (sysbench) | Tabela 1 |
+| `data/io_disco.csv` | I/O de disco sequencial e aleatório (fio) | Tabela 2 |
+| `data/startup.csv` | Tempo de startup de container (hyperfine) | Tabela 3 |
+
+As saídas brutas das execuções individuais (9 runs por benchmark) devem ser
+salvas em `results/` ao rodar `scripts/run_benchmarks.sh`.
 
 ## Licença
 
