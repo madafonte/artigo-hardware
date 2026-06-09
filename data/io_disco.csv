@@ -1,0 +1,5 @@
+padrao_acesso,unidade,wsl2_nativo,docker_windows,macos_nativo,docker_macos
+leitura_sequencial,MiB/s,1195,1228,3079,5385
+escrita_sequencial,MiB/s,486,501,1459,3033
+leitura_aleatoria,IOPS,4972,4719,47800,44700
+escrita_aleatoria,IOPS,78500,110000,37100,36400

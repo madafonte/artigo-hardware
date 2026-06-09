@@ -1,0 +1,3 @@
+operacao,wsl2_nativo_MiBps,docker_windows_MiBps,macos_nativo_MiBps,docker_macos_MiBps
+escrita,9033,9552,12349,11783
+leitura,10438,10843,12587,12723

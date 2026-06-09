@@ -1,0 +1,3 @@
+ambiente,media_ms,desvio_padrao_ms,min_ms,max_ms
+Docker/Windows (WSL2),733.1,41.4,670.9,792.8
+Docker/macOS,155.9,9.5,136.9,165.8
